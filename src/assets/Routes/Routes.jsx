@@ -5,7 +5,6 @@ import Apps from "../Pages/Apps";
 import Installation from "../Pages/Installation";
 import MainLayout from "../Layouts/MainLayout";
 import ErrorPage from "../Pages/ErrorPage";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,10 +14,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch('/HomeAppData.json'),
+        hydrateFallbackElement: <div>Loading...</div>,
       },
       {
         path: "/Apps",
         element: <Apps />,
+        loader: () => fetch('/AppsData.json'),
       },
       {
         path: "/Installation",

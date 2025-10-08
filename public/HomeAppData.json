@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "image": "https://example.com/image1.png",
+    "title": "Fitness Pro – Complete Daily Workout & Fitness Tracker",
+    "companyName": "FitCorp",
+    "description": "Fitness Pro is your ultimate daily workout companion designed for beginners and professionals alike. It offers personalized workout plans, detailed exercise instructions, and video demonstrations to ensure correct form. You can track your progress, set goals, and monitor improvements over time. The app also includes nutrition tips and reminders to maintain a healthy lifestyle. With Fitness Pro, you can stay motivated, achieve your fitness goals, and improve overall health. It’s perfect for home workouts, gym sessions, and outdoor activities.",
+    "size": 45,
+    "reviews": 120,
+    "ratingAvg": 4.5,
+    "downloads": 5000,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 35 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://example.com/image2.png",
+    "title": "Yoga Daily – Guided Yoga Exercises for Mind & Body",
+    "companyName": "ZenLife",
+    "description": "Yoga Daily provides step-by-step guided yoga exercises to improve flexibility, balance, and overall wellness. Suitable for beginners to advanced practitioners, the app includes video tutorials, breathing techniques, and posture corrections. You can track daily sessions, set reminders, and monitor your progress. It also offers meditation exercises for mental clarity and stress relief. The app helps you establish a healthy routine and maintain consistency in your yoga practice. With Yoga Daily, achieving inner peace and a fit body has never been easier.",
+    "size": 30,
+    "reviews": 80,
+    "ratingAvg": 4.2,
+    "downloads": 3000,
+    "ratings": [
+      { "name": "1 star", "count": 2 },
+      { "name": "2 star", "count": 8 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 35 },
+      { "name": "5 star", "count": 20 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://example.com/image3.png",
+    "title": "Gym Tracker – Monitor & Improve Your Fitness Progress",
+    "companyName": "MuscleMax",
+    "description": "Gym Tracker allows you to plan, log, and track all your gym workouts easily. The app provides detailed exercise instructions, sets, and reps tracking, as well as weight progression monitoring. You can create personalized routines, set fitness goals, and analyze progress with charts and graphs. It also includes rest timers and motivational tips to keep you consistent. Perfect for home and gym workouts, Gym Tracker helps you stay disciplined and achieve measurable fitness results. Suitable for beginners and advanced fitness enthusiasts.",
+    "size": 50,
+    "reviews": 150,
+    "ratingAvg": 4.7,
+    "downloads": 8000,
+    "ratings": [
+      { "name": "1 star", "count": 3 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 60 },
+      { "name": "5 star", "count": 67 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://example.com/image4.png",
+    "title": "Healthy Meals – Nutrition Planner & Delicious Recipes",
+    "companyName": "NutriApp",
+    "description": "Healthy Meals is your companion for balanced eating and smart meal planning. It provides a wide variety of healthy recipes, detailed nutrition information, and meal preparation tips. You can track calories, macronutrients, and set dietary goals. The app also allows you to create weekly meal plans, grocery lists, and personalized meal suggestions. Ideal for weight management and maintaining a healthy lifestyle. It helps you make informed choices and enjoy tasty, nutritious meals daily.",
+    "size": 40,
+    "reviews": 95,
+    "ratingAvg": 4.3,
+    "downloads": 4500,
+    "ratings": [
+      { "name": "1 star", "count": 4 },
+      { "name": "2 star", "count": 6 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 40 },
+      { "name": "5 star", "count": 25 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://example.com/image5.png",
+    "title": "Step Counter – Daily Steps & Activity Tracker",
+    "companyName": "WalkEasy",
+    "description": "Step Counter helps you monitor your daily physical activity and maintain an active lifestyle. It accurately tracks steps, distance, and calories burned. The app allows you to set daily step goals, track progress over time, and view weekly or monthly summaries. You can also integrate it with other health apps and devices. With reminders and motivational badges, Step Counter encourages you to walk more and improve overall health. Perfect for all ages, it promotes a healthier and more active lifestyle.",
+    "size": 25,
+    "reviews": 60,
+    "ratingAvg": 4.0,
+    "downloads": 2000,
+    "ratings": [
+      { "name": "1 star", "count": 1 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 25 },
+      { "name": "5 star", "count": 14 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://example.com/image6.png",
+    "title": "Cardio Blast – High-Intensity Workouts for Fitness",
+    "companyName": "FitFun",
+    "description": "Cardio Blast provides structured high-intensity interval training for quick fat burning and stamina improvement. It includes various workouts suitable for home or gym sessions, with timers and video demonstrations. You can track calories burned, heart rate, and performance over time. The app also offers tips for proper recovery and nutrition guidance to maximize results. Perfect for beginners and advanced users, Cardio Blast helps you stay motivated and achieve fitness goals efficiently. It’s a complete package for cardio enthusiasts.",
+    "size": 55,
+    "reviews": 110,
+    "ratingAvg": 4.6,
+    "downloads": 6000,
+    "ratings": [
+      { "name": "1 star", "count": 2 },
+      { "name": "2 star", "count": 7 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 31 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://example.com/image7.png",
+    "title": "Meditation Guide – Relax & Improve Mental Focus",
+    "companyName": "CalmMind",
+    "description": "Meditation Guide offers guided meditation sessions to reduce stress, improve focus, and enhance mental clarity. The app includes sessions of varying lengths, breathing exercises, and mindfulness techniques. You can track daily meditation streaks, set reminders, and choose different ambient sounds. Suitable for beginners and experienced meditators alike. The app helps promote better sleep, emotional balance, and overall well-being. Daily use ensures a calmer mind and a healthier lifestyle.",
+    "size": 35,
+    "reviews": 85,
+    "ratingAvg": 4.4,
+    "downloads": 4000,
+    "ratings": [
+      { "name": "1 star", "count": 1 },
+      { "name": "2 star", "count": 3 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 40 },
+      { "name": "5 star", "count": 26 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://example.com/image8.png",
+    "title": "Protein Tracker – Monitor Daily Protein Intake Easily",
+    "companyName": "NutriMax",
+    "description": "Protein Tracker allows you to log your daily protein consumption and maintain a balanced diet. You can set personalized protein goals, track meals, and view detailed nutrition reports. The app provides suggestions for high-protein foods and tips for muscle building or weight management. It integrates easily with other fitness and health apps. Users receive progress charts and alerts to ensure they meet their nutritional targets. Perfect for athletes, bodybuilders, or anyone conscious about protein intake.",
+    "size": 28,
+    "reviews": 70,
+    "ratingAvg": 4.1,
+    "downloads": 3500,
+    "ratings": [
+      { "name": "1 star", "count": 2 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 25 },
+      { "name": "5 star", "count": 18 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://example.com/image9.png",
+    "title": "Sleep Tracker – Monitor Sleep Patterns for Better Health",
+    "companyName": "RestWell",
+    "description": "Sleep Tracker monitors your sleep patterns to help improve rest quality and overall health. The app records sleep duration, cycles, and interruptions. It provides personalized recommendations for better sleep, including bedtime routines and lifestyle tips. Users can set alarms, view weekly and monthly sleep trends, and integrate with fitness trackers. Ideal for anyone aiming to enhance productivity, reduce stress, and maintain a healthy lifestyle. Using Sleep Tracker regularly promotes better mental and physical well-being.",
+    "size": 33,
+    "reviews": 90,
+    "ratingAvg": 4.3,
+    "downloads": 4200,
+    "ratings": [
+      { "name": "1 star", "count": 3 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 40 },
+      { "name": "5 star", "count": 22 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://example.com/image10.png",
+    "title": "Cycling Pro – Track Sessions & Improve Performance",
+    "companyName": "BikeFit",
+    "description": "Cycling Pro helps you track cycling sessions, speed, distance, and performance metrics. You can set personalized goals, monitor improvements, and view detailed charts. The app offers route planning, time tracking, and GPS integration. It also provides motivational tips and safety reminders. Suitable for recreational cyclists and serious athletes. Cycling Pro helps enhance endurance, track progress, and make cycling more enjoyable and effective.",
+    "size": 48,
+    "reviews": 130,
+    "ratingAvg": 4.5,
+    "downloads": 5500,
+    "ratings": [
+      { "name": "1 star", "count": 4 },
+      { "name": "2 star", "count": 6 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 45 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://example.com/image11.png",
+    "title": "HIIT Workouts – Short Intense Sessions for Maximum Fat Burn",
+    "companyName": "EnergyUp",
+    "description": "HIIT Workouts app provides structured high-intensity sessions designed to maximize fat burning and cardiovascular fitness. Each session includes timers, video guidance, and rest intervals. You can track calories burned, monitor heart rate, and assess performance over time. It also offers tips for recovery, nutrition, and motivation. Suitable for all fitness levels, HIIT Workouts promotes consistency, efficiency, and measurable results. The app helps users stay motivated, fit, and healthy through scientifically designed routines.",
+    "size": 50,
+    "reviews": 115,
+    "ratingAvg": 4.6,
+    "downloads": 6200,
+    "ratings": [
+      { "name": "1 star", "count": 3 },
+      { "name": "2 star", "count": 4 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 55 },
+      { "name": "5 star", "count": 33 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://example.com/image12.png",
+    "title": "Mindfulness App – Daily Exercises for Mental Clarity",
+    "companyName": "PeaceTime",
+    "description": "Mindfulness App provides daily exercises to enhance focus, reduce stress, and increase mental clarity. It includes guided meditations, breathing exercises, and reflective prompts. You can track streaks, set reminders, and personalize exercises based on your goals. The app promotes emotional well-being, better sleep, and a calm mind. It also includes motivational tips and progress tracking. Perfect for anyone seeking balance and clarity in daily life. Mindfulness App integrates seamlessly into busy schedules.",
+    "size": 38,
+    "reviews": 88,
+    "ratingAvg": 4.3,
+    "downloads": 4100,
+    "ratings": [
+      { "name": "1 star", "count": 1 },
+      { "name": "2 star", "count": 3 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 45 },
+      { "name": "5 star", "count": 24 }
+    ]
+  }
+  
+ 
+ 
+ 
+]
