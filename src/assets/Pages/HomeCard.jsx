@@ -14,12 +14,12 @@ const HomeCard = ({ app }) => {
   return (
     <div
       onClick={handleCardClick}
-      className="border p-4 rounded-lg shadow-md m-4 cursor-pointer hover:shadow-lg transition duration-200 hover:-translate-y-1"
+      className="p-4 bg-white rounded-lg shadow-md m-4 cursor-pointer hover:shadow-lg transition duration-200 hover:-translate-y-1"
     >
       <img
         src={app.image}
         alt=""
-        className="w-full h-32 object-cover rounded-md"
+        className="w-full h-40 object-cover rounded-md"
       />
 
       <h3 className="text-center text-lg font-medium mt-2">{app.title}</h3>

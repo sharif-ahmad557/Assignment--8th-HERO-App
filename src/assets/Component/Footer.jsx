@@ -6,40 +6,49 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../Images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 mt-10">
-      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black text-white py-12 mt-10">
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        
         {/* About Section */}
-        <div>
-          <Link to="/" className="text-xl font-bold mb-4">HERO.IO</Link>
-          <p className="text-gray-300">
-            Crafting innovative apps to make life simpler, smarter, and more
-            exciting.
+        <div className="">
+          <Link to="/" className="flex items-center justify-center md:justify-start gap-2 mb-4">
+            <img src={logo} alt="SoftSphere Studio Logo" className="w-10 h-10 " />
+            <span className="text-2xl font-bold">SoftSphere Studio</span>
+          </Link>
+          <p className="text-gray-300 mb-4 text-center md:text-left">
+            Crafting innovative and engaging apps to make your digital experience smarter, simpler, and more enjoyable. We focus on quality, creativity, and user satisfaction to bring your ideas to life.
+          </p>
+          <p className="text-gray-400 text-sm text-center md:text-left">
+            Join our community and explore our apps across multiple platforms including Android, iOS, and Web.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h2 className="text-xl font-bold mb-4">Quick Links</h2>
-          <ul className="space-y-2">
+          <h2 className="text-xl font-bold mb-4 text-center md:text-left">Quick Links</h2>
+          <ul className="space-y-2 text-center md:text-left">
             <li>
               <Link to="/" className="hover:text-gray-400 transition">
-                Home
+                Home - Discover our latest apps
               </Link>
             </li>
             <li>
               <Link to="/Apps" className="hover:text-gray-400 transition">
-                Apps
+                Apps - Browse all our applications
               </Link>
             </li>
             <li>
-              <Link
-                to="/Installation"
-                className="hover:text-gray-400 transition"
-              >
-                Installation
+              <Link to="/Installation" className="hover:text-gray-400 transition">
+                Installation - Step-by-step setup guides
+              </Link>
+            </li>
+            <li>
+              <Link to="/Contact" className="hover:text-gray-400 transition">
+                Contact - Reach out to our team
               </Link>
             </li>
           </ul>
@@ -47,27 +56,43 @@ const Footer = () => {
 
         {/* Social / Contact */}
         <div>
-          <h2 className="text-xl font-bold mb-4">Follow Us</h2>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-gray-400 transition">
+          <h2 className="text-xl font-bold mb-4 text-center md:text-left">Follow & Connect</h2>
+          <p className="text-gray-300 mb-4 text-center md:text-left">
+            Stay connected with us on social media and be the first to know about new updates, features, and releases.
+          </p>
+          <div className="flex flex-row justify-center md:justify-start gap-4 mb-6">
+            <a href="#" className="hover:text-blue-500 transition text-2xl">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-gray-400 transition">
+            <a href="#" className="hover:text-sky-400 transition text-2xl">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-gray-400 transition">
+            <a href="#" className="hover:text-pink-500 transition text-2xl">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-gray-400 transition">
+            <a href="#" className="hover:text-blue-700 transition text-2xl">
               <FaLinkedinIn />
             </a>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold mb-2 text-center md:text-left">Get Our App</h3>
+            <div className="flex flex-row justify-center md:justify-start gap-4">
+              {/* এখানে React Icon দিয়ে Google Play, App Store বা অন্য প্ল্যাটফর্মের বাটন দিতে পারো */}
+              <a href="#" className="bg-gray-800 px-4 py-2 rounded flex items-center gap-2 hover:bg-gray-700 transition">
+                {/* এখানে Google Play Icon বসাও */}
+                <span>Google Play</span>
+              </a>
+              <a href="#" className="bg-gray-800 px-4 py-2 rounded flex items-center gap-2 hover:bg-gray-700 transition">
+                <span>App Store</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom copyright */}
-      <div className="w-11/12 mx-auto mt-8 border-t border-gray-700 pt-4 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} HERO.IO. All rights reserved.
+      <div className="w-full mt-10 border-t border-gray-700 pt-4 text-center text-gray-400 text-sm">
+        © {new Date().getFullYear()} SoftSphere Studio. All rights reserved.
       </div>
     </footer>
   );

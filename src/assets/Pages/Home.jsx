@@ -22,7 +22,7 @@ const Home = () => {
       }
       </div>
 <div className="flex justify-center">
-  <Link to="/apps" className=" py-2 px-4 text-xl font-medium rounded-xl text-white bg-gradient-to-r from-[#632ee3] to-[#9f62f2] hover:from-[#7540f0] hover:to-[#b57dfc] shadow-md hover:shadow-xl">Show All</Link>
+  <Link to="/apps" className="text-white text-2xl font-semibold  gap-2 py-2 px-4 rounded-md bg-gradient-to-r from-[#632ee3] to-[#9f62f2] hover:from-[#7540f0] hover:to-[#b57dfc] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">Show All</Link>
 
   </div>      </div>
     </>

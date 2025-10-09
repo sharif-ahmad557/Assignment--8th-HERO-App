@@ -43,7 +43,6 @@ const AppDetails = () => {
       autoClose: 2000,
       closeButton: true,
       hideProgressBar: false,
-      theme: "colored",
     });
 
     const savedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
@@ -79,16 +78,7 @@ const AppDetails = () => {
   return (
     <div className="w-11/12 md:w-4/5 mx-auto my-10">
       {/* Toast Container */}
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        closeButton={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        theme="colored"
-      />
+      <ToastContainer />
 
       <div className="flex flex-col md:flex-row gap-6 border-b-2 border-gray-300 pb-6">
         {/*  Left App Image */}
@@ -158,7 +148,6 @@ const AppDetails = () => {
         )}
       </div>
 
-      
       <h2 className="text-xl font-medium">Description</h2>
       <p>{app.description}</p>
     </div>

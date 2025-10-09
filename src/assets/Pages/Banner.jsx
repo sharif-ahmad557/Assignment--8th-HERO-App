@@ -8,7 +8,7 @@ const Banner = () => {
     return (
          <div>
       <div className="w-11/12 mx-auto mt-8">
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="text-5xl font-bold text-center">
           We Build <br></br> <span className="text-[#632ee3]">Productive</span>{" "}
           Apps
         </h2>
