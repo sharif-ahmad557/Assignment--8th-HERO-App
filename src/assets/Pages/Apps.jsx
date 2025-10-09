@@ -6,18 +6,17 @@ const Apps = () => {
   const AllAppsData = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredApps, setFilteredApps] = useState(AllAppsData);
-  const [loading, setLoading] = useState(false); // ✅ লোডিং স্টেট
+  const [loading, setLoading] = useState(false); 
 
-  // ✅ সার্চ ইনপুট পরিবর্তন হলে লোডিং দেখাও
   useEffect(() => {
-    setLoading(true); // লোডিং শুরু
+    setLoading(true);
     const delay = setTimeout(() => {
       const filtered = AllAppsData.filter((app) =>
         app.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredApps(filtered);
-      setLoading(false); // লোডিং শেষ
-    }, 500); // হালকা delay (UX smooth রাখার জন্য)
+      setLoading(false); 
+    }, 500);
     return () => clearTimeout(delay);
   }, [searchTerm, AllAppsData]);
 
@@ -59,14 +58,14 @@ const Apps = () => {
           </label>
         </div>
 
-        {/* ✅ লোডিং স্পিনার */}
+      
         {loading && (
           <div className="mt-6 flex justify-center">
             <span className="loading loading-spinner text-[#00d390] loading-lg"></span>
           </div>
         )}
 
-        {/* ✅ অ্যাপ লিস্ট */}
+        
         {!loading && filteredApps.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full mb-10 mt-4">
             {filteredApps.map((app) => (

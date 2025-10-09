@@ -1,4 +1,3 @@
-// RatingsChart.jsx
 import React from "react";
 
 const RatingsChart = ({ ratings }) => {

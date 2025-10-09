@@ -18,7 +18,7 @@ const HomeCard = ({ app }) => {
     >
       <img
         src={app.image}
-        alt={app.title}
+        alt=""
         className="w-full h-32 object-cover rounded-md"
       />
 

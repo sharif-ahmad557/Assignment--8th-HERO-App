@@ -7,9 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
   const [sortOrder, setSortOrder] = useState("");
-  const [loading, setLoading] = useState(true); // 🌀 লোডিং স্টেট যোগ করা হলো
+  const [loading, setLoading] = useState(true); 
 
-  // ✅ LocalStorage থেকে ডেটা লোড
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -17,10 +16,10 @@ const Installation = () => {
         JSON.parse(localStorage.getItem("installationData")) || [];
       setInstalledApps(savedData);
       setLoading(false);
-    }, 1000); // একটু ডিলে রাখলে লোডার দেখা যায় সুন্দরভাবে
+    }, 1000); 
   }, []);
 
-  // ✅ Uninstall হ্যান্ডলার
+  
   const handleUninstall = (index) => {
     const appTitle = installedApps[index].title;
     const updatedApps = installedApps.filter((_, i) => i !== index);
@@ -29,7 +28,7 @@ const Installation = () => {
     toast.success(`${appTitle} uninstalled successfully!`);
   };
 
-  // ✅ Sort হ্যান্ডলার
+  
   const handleSort = (e) => {
     const value = e.target.value;
     setSortOrder(value);
@@ -42,11 +41,10 @@ const Installation = () => {
     setInstalledApps(sortedApps);
   };
 
-  // ✅ যদি লোডিং চলে, স্পিনার দেখাও
+  
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[60vh]">
-        {/* 🔄 Simple Tailwind Spinner */}
         <div className="w-16 h-16 border-4 border-t-[#00d491] border-gray-300 rounded-full animate-spin"></div>
       </div>
     );
@@ -133,7 +131,16 @@ const Installation = () => {
       </div>
 
       {/* Toast Container */}
-      <ToastContainer position="top-right" autoClose={2000} hideProgressBar />
+<ToastContainer
+  position="top-right"
+  autoClose={2000}
+  hideProgressBar={false}   
+  closeButton={true}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  progressClassName="toast-progress"
+/>
     </div>
   );
 };

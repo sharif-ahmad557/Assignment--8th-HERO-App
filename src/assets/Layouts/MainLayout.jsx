@@ -10,7 +10,6 @@ const MainLayout = () => {
     <div>
       <Header />
 
-      {/* ✅ Page Navigation Loading Spinner */}
       {navigation.state === "loading" ? (
         <div className="flex justify-center items-center h-[60vh]">
           <div className="w-16 h-16 border-4 border-t-[#00d491] border-gray-300 rounded-full animate-spin"></div>

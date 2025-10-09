@@ -1,4 +1,3 @@
-// AppDetails.jsx
 import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -11,6 +10,17 @@ import RatingsChart from "../Pages/RatingsChart";
 const AppDetails = () => {
   const app = useLoaderData();
   const [installed, setInstalled] = useState(false);
+
+  if (!app || !app.title) {
+    return (
+      <div className="text-center my-20">
+        <h2 className="text-3xl font-bold text-red-500">App Not Found</h2>
+        <p className="text-lg text-gray-600 mt-3">
+          Sorry, we couldn't find the app you are looking for.
+        </p>
+      </div>
+    );
+  }
 
   useEffect(() => {
     if (!app?.title) return;
@@ -31,6 +41,9 @@ const AppDetails = () => {
     toast.success(`${app.title} installed successfully!`, {
       position: "top-center",
       autoClose: 2000,
+      closeButton: true,
+      hideProgressBar: false,
+      theme: "colored",
     });
 
     const savedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
@@ -65,20 +78,30 @@ const AppDetails = () => {
 
   return (
     <div className="w-11/12 md:w-4/5 mx-auto my-10">
-      <ToastContainer />
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        closeButton={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        theme="colored"
+      />
 
       <div className="flex flex-col md:flex-row gap-6 border-b-2 border-gray-300 pb-6">
-        {/* Left: App Image */}
-        <div className="md:w-1/3">
+        {/*  Left App Image */}
+        <div className="md:w-1/4">
           <img
             src={app.image}
             alt="app"
-            className="w-full h-auto rounded-lg object-cover"
+            className="h-auto rounded-lg object-cover"
           />
         </div>
 
-        {/* Right: App Info */}
-        <div className="md:w-2/3 flex flex-col justify-between">
+        {/* Right App Info */}
+        <div className="md:w-3/4 flex flex-col justify-between">
           <div className="pb-10 border-b-2 border-gray-300">
             <h2 className="text-2xl font-bold">{app.title}</h2>
             <p className="mt-2 text-xl font-medium">
@@ -89,7 +112,7 @@ const AppDetails = () => {
             </p>
           </div>
 
-          {/* Stats */}
+          {/* Stats Section */}
           <div className="flex justify-start gap-8 mt-6">
             <div className="flex flex-col items-center p-3 rounded-lg">
               <img src={downloadicon} alt="downloads" className="w-6 mb-1" />
@@ -110,11 +133,11 @@ const AppDetails = () => {
             </div>
           </div>
 
-          {/*  Install Button */}
+          {/* Install Button */}
           <button
             onClick={handleInstall}
             disabled={installed}
-            className={`w-40 mt-6 py-2 rounded-lg text-white text-xl font-medium transition ${
+            className={`w-60 mt-6 py-2 rounded-lg text-white text-xl font-medium transition ${
               installed
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-[#00d390] hover:bg-[#ff9922]"
@@ -125,7 +148,7 @@ const AppDetails = () => {
         </div>
       </div>
 
-      {/* Ratings Chart */}
+      {/* Ratings Chart Section */}
       <div className="border-b-2 border-gray-300 pb-6 my-6">
         {app.ratings && app.ratings.length > 0 && (
           <div className="my-6">
@@ -135,6 +158,7 @@ const AppDetails = () => {
         )}
       </div>
 
+      
       <h2 className="text-xl font-medium">Description</h2>
       <p>{app.description}</p>
     </div>

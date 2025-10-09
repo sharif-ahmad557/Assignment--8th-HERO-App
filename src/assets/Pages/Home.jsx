@@ -25,7 +25,6 @@ const Home = () => {
   <Link to="/apps" className=" py-2 px-4 text-xl font-medium rounded-xl text-white bg-gradient-to-r from-[#632ee3] to-[#9f62f2] hover:from-[#7540f0] hover:to-[#b57dfc] shadow-md hover:shadow-xl">Show All</Link>
 
   </div>      </div>
-        {/* top */}
     </>
   );
 };
