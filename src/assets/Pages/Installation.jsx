@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
 import ratingicon from "../Images/icon-ratings.png";
 import downloadicon from "../Images/icon-downloads.png";
-import { ToastContainer, toast } from "react-toastify"; 
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
   const [sortOrder, setSortOrder] = useState("");
+  const [loading, setLoading] = useState(true); // 🌀 লোডিং স্টেট যোগ করা হলো
 
+  // ✅ LocalStorage থেকে ডেটা লোড
   useEffect(() => {
-    const savedData =
-      JSON.parse(localStorage.getItem("installationData")) || [];
-    setInstalledApps(savedData);
+    setLoading(true);
+    setTimeout(() => {
+      const savedData =
+        JSON.parse(localStorage.getItem("installationData")) || [];
+      setInstalledApps(savedData);
+      setLoading(false);
+    }, 1000); // একটু ডিলে রাখলে লোডার দেখা যায় সুন্দরভাবে
   }, []);
 
+  // ✅ Uninstall হ্যান্ডলার
   const handleUninstall = (index) => {
     const appTitle = installedApps[index].title;
     const updatedApps = installedApps.filter((_, i) => i !== index);
@@ -22,17 +29,28 @@ const Installation = () => {
     toast.success(`${appTitle} uninstalled successfully!`);
   };
 
+  // ✅ Sort হ্যান্ডলার
   const handleSort = (e) => {
     const value = e.target.value;
     setSortOrder(value);
     let sortedApps = [...installedApps];
     if (value === "High-Low") {
-      sortedApps.sort((a, b) => b.downloads - a.downloads); 
+      sortedApps.sort((a, b) => b.downloads - a.downloads);
     } else if (value === "Low-High") {
-      sortedApps.sort((a, b) => a.downloads - b.downloads); 
+      sortedApps.sort((a, b) => a.downloads - b.downloads);
     }
     setInstalledApps(sortedApps);
   };
+
+  // ✅ যদি লোডিং চলে, স্পিনার দেখাও
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[60vh]">
+        {/* 🔄 Simple Tailwind Spinner */}
+        <div className="w-16 h-16 border-4 border-t-[#00d491] border-gray-300 rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -50,7 +68,7 @@ const Installation = () => {
         <select
           value={sortOrder}
           onChange={handleSort}
-          className="select appearance-none"
+          className="select appearance-none border px-3 py-2 rounded-md text-[#333]"
         >
           <option disabled value="">
             Sort By Downloads

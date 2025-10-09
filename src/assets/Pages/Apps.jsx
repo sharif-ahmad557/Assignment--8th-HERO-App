@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router";
 import AppsCard from "../Pages/AppsCard";
 
 const Apps = () => {
   const AllAppsData = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
+  const [filteredApps, setFilteredApps] = useState(AllAppsData);
+  const [loading, setLoading] = useState(false); // ✅ লোডিং স্টেট
 
-
-  const filteredApps = AllAppsData.filter((app) =>
-    app.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // ✅ সার্চ ইনপুট পরিবর্তন হলে লোডিং দেখাও
+  useEffect(() => {
+    setLoading(true); // লোডিং শুরু
+    const delay = setTimeout(() => {
+      const filtered = AllAppsData.filter((app) =>
+        app.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredApps(filtered);
+      setLoading(false); // লোডিং শেষ
+    }, 500); // হালকা delay (UX smooth রাখার জন্য)
+    return () => clearTimeout(delay);
+  }, [searchTerm, AllAppsData]);
 
   return (
     <div>
@@ -49,17 +59,26 @@ const Apps = () => {
           </label>
         </div>
 
-        {/* App list */}
-        {filteredApps.length > 0 ? (
+        {/* ✅ লোডিং স্পিনার */}
+        {loading && (
+          <div className="mt-6 flex justify-center">
+            <span className="loading loading-spinner text-[#00d390] loading-lg"></span>
+          </div>
+        )}
+
+        {/* ✅ অ্যাপ লিস্ট */}
+        {!loading && filteredApps.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full mb-10 mt-4">
             {filteredApps.map((app) => (
               <AppsCard key={app.id} app={app} />
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500 mt-10 text-lg font-medium">
-            No App Found ❌
-          </p>
+          !loading && (
+            <p className="text-center text-gray-500 mt-10 text-lg font-medium">
+              No App Found ❌
+            </p>
+          )
         )}
       </div>
     </div>
