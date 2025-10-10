@@ -148,7 +148,7 @@ const AppDetails = () => {
         )}
       </div>
 
-      <h2 className="text-xl font-medium">Description</h2>
+      <h2 className="text-xl text-center md:text-left font-medium">Description</h2>
       <p>{app.description}</p>
     </div>
   );

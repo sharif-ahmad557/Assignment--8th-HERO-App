@@ -36,7 +36,7 @@ const RatingsChart = ({ ratings }) => {
 
       {/* Numbers */}
       <div className="relative mt-4 text-sm font-semibold text-[#1b3556]">
-        <div className="flex justify-between ml-14">
+        <div className="flex justify-between md:ml-14 ">
           {numbersRow.map((num, idx) => (
             <span key={idx} className={idx === 0 ? "text-left" : "text-center"}>
               {num.toLocaleString()}
