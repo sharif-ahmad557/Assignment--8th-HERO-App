@@ -76,7 +76,7 @@ const Installation = () => {
   return (
     <div>
       {/* Page Title */}
-      <h2 className="text-3xl font-bold text-center mt-4">Your Installed Apps</h2>
+      <h2 className="text-3xl font-bold text-center mt-4">My Installed App</h2>
       <p className="text-center mt-2 text-[#627382]">
         Explore All Trending Apps on the Market developed by us
       </p>
