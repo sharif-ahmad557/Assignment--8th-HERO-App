@@ -1,4 +1,3 @@
-// ErrorApp.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import AppErrorImg from "../Images/App-Error.png";

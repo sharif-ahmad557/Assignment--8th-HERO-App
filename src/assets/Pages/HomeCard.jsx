@@ -1,4 +1,3 @@
-// HomeCard.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom"; // 
 import downloadicon from "../Images/icon-downloads.png";

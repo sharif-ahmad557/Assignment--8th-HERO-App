@@ -10,11 +10,11 @@ const RatingsChart = ({ ratings }) => {
   return (
     <div className=" w-full mx-auto mt-2">
       {sortedRatings.map((rating) => (
-        <div key={rating.name} className="flex items-center mb-2">
+        <div key={rating.name} className="flex items-center mb-4">
           <div className="w-16 text-sm text-gray-700">{rating.name}</div>
           <div className="flex-1 bg-gray-200 h-4 rounded relative">
             <div
-              className="bg-orange-500 h-4 rounded"
+              className="bg-orange-500 h-6  rounded"
               style={{
                 width: `${(rating.count / maxCount) * 100}%`,
               }}
@@ -22,15 +22,7 @@ const RatingsChart = ({ ratings }) => {
           </div>
           <div className="ml-3 text-sm text-gray-600">{rating.count}</div>
         </div>
-        
       ))}
-      
-      <div className=" w-11/12 mx-auto flex justify-between text-xs text-gray-500 mt-4 pl-5">
-        <span>0</span>
-        <span>3000</span>
-        <span className="">6000</span>
-        <span>12000</span>
-      </div>
     </div>
   );
 };

@@ -86,13 +86,13 @@ const AppDetails = () => {
           <img
             src={app.image}
             alt="app"
-            className="h-auto rounded-lg object-cover"
+            className="h-auto bg-white p-4 rounded-lg object-cover"
           />
         </div>
 
         {/* Right App Info */}
         <div className="md:w-3/4 flex flex-col justify-between">
-          <div className="pb-10 border-b-2 border-gray-300">
+          <div className="pb-6 border-b-2 border-gray-300">
             <h2 className="text-2xl font-bold">{app.title}</h2>
             <p className="mt-2 text-xl font-medium">
               Developed by:{" "}
@@ -103,7 +103,7 @@ const AppDetails = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="flex justify-start gap-8 mt-6">
+          <div className="flex justify-start gap-8 mt-4">
             <div className="flex flex-col items-center p-3 rounded-lg">
               <img src={downloadicon} alt="downloads" className="w-6 mb-1" />
               <h4 className="font-medium">Downloads</h4>
@@ -127,7 +127,7 @@ const AppDetails = () => {
           <button
             onClick={handleInstall}
             disabled={installed}
-            className={`w-60 mt-6 py-2 rounded-lg text-white text-xl font-medium transition ${
+            className={`w-60 mt-4 py-2 rounded-lg text-white text-xl font-medium transition ${
               installed
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-[#00d390] hover:bg-[#ff9922]"
